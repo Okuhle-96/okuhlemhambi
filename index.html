@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Okuhle Mhambi</title>
+  </head>
+  <style media="screen">
+  @import 'https://fonts.googleapis.com/css?family=Raleway';
+
+  html, body
+  {
+      background: gold;
+      font-family: Raleway;
+    }
+
+  header, footer
+  {
+      font-family: Raleway;
+      margin: 0 auto;
+      padding: 5em 3em;
+      text-align: center;
+      background: gold;
+  }
+
+  header h1
+  {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 5px;
+  }
+
+
+  div.container
+  {
+      font-family: Raleway;
+      margin: 0 auto;
+      padding: 100px 30px;
+      margin-right: 100px;
+      margin-left: 100px;
+      text-align: center;
+  }
+
+  div.container a
+  {
+      color: #FFF;
+      text-decoration: none;
+      font: 20px Raleway;
+      margin: 20px;
+      padding: 25px;
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+  }
+
+  .red
+  {
+      background: black;
+      margin-bottom: 20px;
+  }
+
+  div.topBotomBordersOut a:before, div.topBotomBordersOut a:after
+  {
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background: #FFF;
+      content: "";
+      opacity: 0;
+      transition: all 0.3s;
+  }
+
+  div.topBotomBordersOut a:before
+  {
+      top: 0px;
+      transform: translateY(10px);
+  }
+
+  div.topBotomBordersOut a:after
+  {
+      bottom: 0px;
+      transform: translateY(-10px);
+  }
+
+  div.topBotomBordersOut a:hover:before, div.topBotomBordersOut a:hover:after
+  {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+
+
+  div.topBotomBordersIn a:before, div.topBotomBordersIn a:after
+  {
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background: #FFF;
+      content: "";
+      opacity: 0;
+      transition: all 0.3s;
+  }
+
+  div.topBotomBordersIn a:before
+  {
+      top: 0px;
+      transform: translateY(-10px);
+  }
+
+  div.topBotomBordersIn a:after
+  {
+      bottom: 0px;
+      transform: translateY(10px);
+  }
+
+  div.topBotomBordersIn a:hover:before, div.topBotomBordersIn a:hover:after
+  {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+
+  #about {
+    display: column;
+  background-color: black;
+  height: 700px;
+  box-sizing: border-box;
+  padding: 60px;
+  margin:130px;
+  flex-direction: column;
+  }
+
+  #about .row {
+    display: flex;
+  }
+
+  #about .column {
+    float: left;
+    width: 50%;
+  }
+
+
+  #about .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .titles{
+    color: white;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .titles h1{
+    padding-top: 115px;
+    font-size: 5rem;
+    margin-top: 0px;
+    text-align: center;
+    color: white;
+
+  }
+img:hover{
+    transform: translateY(10%);
+}
+ button:hover {
+  transform: translateY(-20%);
+    box-shadow: 10px 15px black;
+}
+
+  .titles p{
+    font-size: 2.5rem;
+    letter-spacing: 10px;
+    margin-bottom: 70px;
+    text-align: right;
+    color:gold;
+    padding: 20px;
+    background-color: black;
+  }
+  .demo a {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    z-index: 2;
+    display: inline-block;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #fff;
+    font : 20px Raleway;
+    letter-spacing: .5em;
+    text-decoration: none;
+    transition: opacity .3s;
+  }
+  .demo a:hover {
+    opacity: .2;
+  }
+  #section08 a {
+    margin-top: 200px;
+  padding-top: 40px;
+}
+#section08 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 30px;
+  height: 60px;
+  margin-left: -15px;
+  border: 2px solid #000;
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+#section08 a span::before {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  content: '';
+  width: 7px;
+  height: 7px;
+  margin-left: -3px;
+  background-color: #000;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+
+  .container-boxes{
+    margin: 0 auto;
+    padding: 0;
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-width: 80vw;
+  }
+
+  .box{
+    background: white;
+    margin: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 350px;
+    max-height: 300px;
+    min-height: 180px;
+    transition: all 250ms ease-out;
+  }
+
+  .box:hover{
+    background: rgba(255,255,255,.7);
+    transform: translateY(-20%);
+  }
+
+  .box a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .icon{
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  .text h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+
+  .text p{
+    font-size: 20px;
+    font-weight: lighter;
+    margin-top: 1rem;
+    line-height: 2rem;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .text{
+    padding: .5rem;
+  }
+  .fas {
+    color: gold;
+  }
+  .fab {
+    color: gold;
+  }
+  .icon-bar {
+    position: fixed;
+    top: 66%;
+    left: 4.1%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.3s ease;
+    color: gold;
+    font-size: 25px;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+    color: white;
+  }
+
+  .facebook {
+    background: black;
+    color: white;
+  }
+  .twitter {
+    background: black;
+    color: white;
+  }
+  .linkedin {
+    background: black;
+    color: white;
+  }
+  .google {
+    background: BLACK;
+    color: white;
+  }
+
+
+
+  @media (max-width: 1160px;){
+     .icon{
+      font-size: 2rem;
+      padding: 0.5rem;
+    }
+    .text h3{
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 0;
+      font-size: 2rem;
+    }
+
+    .text p{
+      margin-top: 1rem;
+      line-height: 1.5rem;
+      text-align: left;
+      font-size: 2rem;
+    }
+  #skills{
+    height: 700px;
+  }
+
+  .column1{
+    float: left;
+    width: 25%;
+  }
+  .column1{
+    float: left;
+    width: 25%;
+  }
+  .column1:hover{
+    transform: translateY(-20%);
+  }
+
+  /* Clear floats after the columns */
+  .row1:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+#work .img:hover{
+    background: rgba(255,255,255,.7);
+    transform: translateY(-20%);
+}
+
+  </style>
+
+  <body>
+<header id="home">
+  <div class="container red topBotomBordersOut">
+  <a href="#home">HOME</a>
+  <a href="#about">ABOUT</a>
+  <a href="#skills">SKILLS</a>
+  <a href="#work">PORTFOLIO</a>
+  <a href="#footer">CONTACT</a>
+</div>
+<div class="titles">
+  <h1>Okuhle Mhambi</h1>
+  <p>A web developer.</p>
+
+</div>
+<div id="section08" class="demo">
+  <a href="#about"><span></span></a>
+</div>
+</header>
+
+<main>
+
+</div>
+
+  <section id="about" >
+    <div class="row">
+
+    <h2 style="font-size:50px; margin-top: 10px; color:white; text-decoration: underline;"> About Self</p>
+      <div class="column">
+       <img style="border: 25px solid gold; margin-top:0px; "src="IMG_20190823_123911.png" width="370px"alt="" height="400px">
+      </div>
+      <div style="color: white;"class="column">
+      <p style="font-size: 30px;">Hi! I am Okuhle Mhambi.</p>
+      <p style="font-size: 20px;">A web designer and a web developer.</p>
+      <p style="font-size: 20px;">I matriculated in 2013 and I was a numbers person. Later Graduated in 2017,
+      I'm in possession of a National Diploma in Financial Information Systems which introduced me to IT.</p>
+      <p style="font-size: 20px; margin-bottom: 70px;">Currently, I am a student at Qurky 30 where I am corely learning Web Development at.</p>
+      <a href="#skills" style="background:gold; color:black; border: 0px; font-size:17px; padding:15px; text-decoration:none; class="button" ">See My Skills</a>
+      </div>
+    </div>
+  </section>
+
+    <section id="skills" class="titles">
+       <div class="icon-bar">
+         <a href="https://www.facebook.com/okuhlemhambi.9/" class="facebook"><i class="fa fa-facebook"></i></a>
+         <a href="https://www.twitter.com/okuhlemhambi/" class="twitter"><i class="fa fa-twitter"></i></a>
+         <a href="https://www.google.com/okuhlemhambi/" class="google"><i class="fa fa-google"></i></a>
+         <a href="https://www.linkedin.com/okuhlemhambi/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+       </div>
+
+     </section>
+
+     <section id="skills" >
+     <h2 style="margin-left:200px;font-size:50px; color:black; text-decoration: underline;">My Skills</h2>
+     <div class="container-boxes">
+       <div class="box">
+
+
+         <div class="text">
+           <a href="">
+             <h3>HTML, JS &CSS</h3>
+             <p>I have done and perfectect HTML and CSS at Quirky 30.
+               Basic knowledge of JavaScript and still learning.</p>
+           </a>
+         </div>
+
+       </div>
+
+       <div class="box">
+         <div class="text">
+           <a href="">
+             <h3>WORDPRESS</h3>
+             <p>We use wordpress as a theme operator when developing websites at Quirky 30.
+             It is easy to use and it creates magic.</p>
+           </a>
+         </div>
+
+       </div>
+
+       <div class="box">
+
+         <div class="text">
+           <a href="">
+             <h3>SQL & VB.Net</h3>
+             <p>On the past years as a student I have gained knowledge and experience in SQL and VB.Net. And I'm still learning.</p>
+           </a>
+         </div>
+         </div>
+</div>
+      <div style="display:flex;">  <a href="#work" style="background:black; margin-left: 520px; margin-top: 50px; margin-bottom:50px; color:gold; border: 0px; font-size:17px; padding:15px; text-decoration:none; class="button" ">Take A Look At My Work</a> </div>
+</section>
+      <section id="work" style="background-color:white; height: 700px; margin-left: 140px;" >
+
+        <div class="pot">
+          <h2 style="font-size:50px; color:gold;text-decoration: underline; margin-left:65px; padding-top:80px; padding-bottom:50px;" >My Portfolio</h2>
+        </div>
+
+        <div class="images">
+          <img src="1.png" height="300px" width="250px" style="margin-left: 30px;   box-shadow: 10px 15px gold;">
+          <img src="2.png" height="300px" width="250px" style="margin-left: 20px;   box-shadow: 10px 15px gold;">
+          <img src="3.png" height="300px" width="250px" style="margin-left: 20px;   box-shadow: 10px 15px gold;">
+          <img src="4.png" height="300px" width="250px" style="margin-left: 20px;   box-shadow: 10px 15px gold;">
+
+        </div>
+        <div class="row1">
+          <button style="height:50px; font-size:17px; color:white; border: 0px; font-family: Raleway; width:200px; background-color:gold; margin-top:50px; margin-left:55px;"><a href="https://www.tseposkillsprojectsevents.co.za/" style="text-decoration:none; color:white;"">Tsepo Skills</a></button>
+        <button style="height:50px; font-size:17px;  color:white; border: 0px; font-family: Raleway; width:200px; background-color:gold; margin-left:70px;"><a href="https://1worldtravel.netlify.com/" style="text-decoration:none; color:white;">Uncedolwethu</button>
+          <button style="height:50px; font-size:17px;  color:white; border: 0px; font-family: Raleway; width:200px; background-color:gold; margin-left:70px;"><a href="https://uncedolwethu.netlify.com/" tstyle="text-decoration:none; color:white;"></a>1World Travel</a></button>
+          <button  style="height:50px; font-size:17px; color:white; border: 0px; font-family: Raleway; width:200px; background-color:gold; margin-left:70px;"><a href="" style="text-decoration:none; color:white;">First Portfolio</a></button>
+        </div>
+
+
+</section>
+
+</main>
+
+  </body>
+  <footer id="footer">
+  <svg viewBox="0 0 100 28">
+   <defs>
+     <mask id="xxx">
+       <circle cx="7" cy="12" r="40" fill="#fff" />
+     </mask>
+
+     <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="
+             1 0 0 0 0
+             0 1 0 0 0
+             0 0 1 0 0
+             0 0 0 13 -9" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+    	</filter>
+       <path id="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+    </defs>
+
+     <use id="wave3" class="wave" xlink:href="#wave" x="0" y="-2" ></use>
+     <use id="wave2" class="wave" xlink:href="#wave" x="0" y="0" ></use>
+
+    <g class="topball">
+    <circle class="ball" cx="110" cy="8" r="4" stroke="none" stroke-width="0" fill="black" />
+
+      <g class="arrow">
+      <polyline class="" points="108,8 110,6 112,8" fill="none"  />
+      <polyline class="" points="110,6 110,10.5" fill="none"  />
+      </g>
+
+    </g>
+    <g class="gooeff">
+    <circle class="drop drop1" cx="20" cy="2" r="1.8"  />
+    <circle class="drop drop2" cx="25" cy="2.5" r="1.5"  />
+    <circle class="drop drop3" cx="16" cy="2.8" r="1.2"  />
+
+      <use id="wave1" class="wave" xlink:href="#wave" x="0" y="1" />
+
+      <!-- g mask="url(#xxx)">
+      <path   id="wave1"  class="wave" d="M 0,10 C 30,10 30,15 60,15 90,15 90,10 120,10 150,10 150,15 180,15 210,15 210,10 240,10 v 28 h -240 z" />
+      </g>
+    </g -->
+
+  </svg>
+
+    <div>Contact Me On Mobile: 0847373885 | Send An e-mail: bukhosimhambi@gmail.com</div>
+  </footer>
+</html>
